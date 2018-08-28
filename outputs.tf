@@ -1,3 +1,18 @@
+output "location" {
+  description = "Azure region"
+  value       = "${var.location}"
+}
+
+output "resource_group_id" {
+  description = "Resource group ID"
+  value       = "${azurerm_resource_group.network.id}"
+}
+
+output "resource_group_name" {
+  description = "Resource group name"
+  value       = "${var.resource_group_name}"
+}
+
 output "vnet_id" {
   description = "The id of the newly created vNet"
   value       = "${azurerm_virtual_network.vnet.id}"
